@@ -11,6 +11,13 @@ $(document).on("keydown", function() {
   }
 });
 
+window.addEventListener('touchstart', function() {
+  if (!started) {
+    nextSequence();
+    started = true;
+  }
+});
+
 function startOver() {
   level = 0;
   gamePattern = [];
